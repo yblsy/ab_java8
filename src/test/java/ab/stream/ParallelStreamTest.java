@@ -44,7 +44,7 @@ public class ParallelStreamTest {
      * @param n
      * @return
      */
-    public long measureSumPref(Function<Long,Long> adder, long n){
+    public static long measureSumPref(Function<Long,Long> adder, long n){
         long fastest = Long.MAX_VALUE;
         for(int i = 0;i < 10;i++){
             long start = System.nanoTime();
