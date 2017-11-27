@@ -113,4 +113,23 @@ public class DishTest_3 {
 
         Map<String[],BigDecimal> maps03 = Dish.getMenu().stream().collect(groupingBy(dish -> new String[]{dish.getType().toString(),dish.getName()},collectingAndThen(summingInt(Dish::getCalories),BigDecimal::new)));
     }
+
+    @Test
+    public void test10(){
+        System.out.println(DishTest_3.rabits(0,1,12,0));
+    }
+
+    /**
+     *
+     * @param last 上上一个
+     * @param prev 上一个
+     * @param month 几个月
+     * @return
+     */
+    public static int rabits(int last,int prev,int month,int index){
+        if(month == index)
+            return last + prev;
+        else
+            return rabits(prev,last + prev,month,++index);
+    }
 }
