@@ -132,4 +132,10 @@ public class DishTest_3 {
         else
             return rabits(prev,last + prev,month,++index);
     }
+
+    @Test
+    public void test11(){
+        Optional<Integer> integer = null;
+        System.out.println(integer.get());
+    }
 }
